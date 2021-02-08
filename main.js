@@ -37,7 +37,7 @@ var RH = ["hulk_right_hand.png","ironman_right_hand.png","spiderman_right_hand.p
 var body = ["ironman_body.png","spiderman_body.png","hulkd_body.png"];
 var face = ["ironman_face.png","hulk_face.png","spiderman_face.png","thor_face.png"];
 var FL  = Math.floor(Math.random()*3);
-
+var FF  = Math.floor(Math.random()*4);
 
 window.addEventListener("keydown",myKeydown);
 
@@ -56,19 +56,28 @@ function myKeydown(e){
         document.getElementById("CH").innerHTML = bih ;
     }
     if(keypressed == '70'){
+        FF  = Math.floor(Math.random()*4);
         block_Update("ironman_face.png");
+        FL  = Math.floor(Math.random()*3);
+        
     }
     if(keypressed == '66'){
         block_Update("spiderman_body.png");
+        FL  = Math.floor(Math.random()*3);
+        FF  = Math.floor(Math.random()*4);
     }
     if(keypressed == '76'){
-        block_Update("hulk_legs.png");
+        FL  = Math.floor(Math.random()*3);
+        block_Update(legs[FL]);
+        FF  = Math.floor(Math.random()*4);
     }
     if(keypressed == '82'){
         block_Update("ThorRightHand.png");
+        FF  = Math.floor(Math.random()*4);
     }
     if(keypressed == '72'){
         block_Update("captain_america_left_hand.png");
+        FF  = Math.floor(Math.random()*4);
     }
     if(keypressed == '38'){
         up();
